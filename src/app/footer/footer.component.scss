@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* Remove bordas/outlines acidentais que podem causar a linha branca */
+  border: none; 
+}
+
+.footer {
+  height: 290px;
+  /* Ajustei o final do gradiente para um tom mais escuro (#1a1a1a) 
+     para evitar que pareça cinza claro demais na borda */
+ background: linear-gradient(to bottom, #000000 0%, #333333 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  position: relative;
+  /* Garante que nada "vaze" para fora causando a linha branca */
+  overflow: hidden; 
+}
+
+.img {
+  margin-bottom: -50px; 
+  line-height: 0;
+}
+
+.img img {
+  width: 200px;
+  display: block; 
+}
+
+.icons {
+  display: flex;
+  gap: 15px; 
+  margin-left: 0px; 
+}
+
+.icons i {
+  font-size: 25px;
+  color: white;
+}
+
+.texto {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  right: 40px;
+    top: 100px; 
+  text-align: right;
+}
+
+.texto h2 {
+  font-size: 24px;
+  margin: 0;
+}

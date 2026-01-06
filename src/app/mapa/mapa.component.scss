@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+.endereco{
+background: #ffffff;
+  width: 600px;
+  padding: 24px;
+  border-radius: 16px;
+   border: 1px solid #eeeeee;
+   box-shadow: 0 10px 30px rgba(0,0,0, 0.1); //profundidade
+   margin: 15px;
+   color: #444;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.container-endereco {
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  margin-top: 40px;
+ 
+}
+.icon{
+    text-align: center;
+}
+
+.text {
+  margin-top: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hora {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre as colunas */
+    margin-bottom: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.hora p {
+    margin: 0;
+    line-height: 1.5;
+}
+.button {
+    background-color: #1e73be; /* Azul do exemplo */
+    border-radius: 6px;
+    height: auto;
+    width: fit-content;
+    padding: 10px 25px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #155a96;
+}
+
+.button a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
