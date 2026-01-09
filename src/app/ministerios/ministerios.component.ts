@@ -10,4 +10,20 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class MinisteriosComponent {
 
+  abreWhats(ministerio:string){
+
+    const contatos: {[key:string]: string} = {
+    Atmosfera: '5515998213506',
+    Midia: '5515997664761',
+    Kids: '5515981408665',
+    Louvor:''
+    };
+  const telefone = contatos[ministerio];
+    if(!ministerio) return; //valida se ele existe
+  const mensagem = `Oii, gostei do ministerio da {atmosfera} e queria saber como faço pra fazer parte`;
+  const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, '_blank');
+  
+  }
 }
