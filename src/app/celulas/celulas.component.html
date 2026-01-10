@@ -1,0 +1,31 @@
+<app-nav-bar></app-nav-bar>
+<main class="principal">
+    <div class="img">
+        <img src="/foto10.png" alt="" class="foto">
+        <div class="text">
+            <h1>Células DIFLEN</h1>
+        </div>
+    </div>
+</main>
+<section>
+    <div class="sobre">
+        <img src="/foto8.png" alt="" class="celula-foto">
+
+        <div class="text">
+            <h1>O que é célula?</h1>
+            <span>
+                <strong>As Células DIFLEN são a igreja acontecendo no lar.</strong>
+                Um espaço pra criar conexões reais, construir amizades verdadeiras e crescer juntos na Palavra de Deus.
+                Aqui a gente vive a fé no dia a dia, compartilha a vida e recebe oração em todas as áreas.
+                Um ambiente cheio de amor, alegria e propósito.
+                Temos Células DIFLEN para todas as idades: adultos, jovens, adolescentes e crianças.<br>
+                Veja as células abaixo e mande uma mensagem pra a qual você mais se identificar!
+            </span>
+        </div>
+    </div>
+    <section class="celulas-grid">
+        <app-card-celula *ngFor="let c of celulas" [celula]="c">
+        </app-card-celula>
+    </section>
+</section>
+<app-footer></app-footer>

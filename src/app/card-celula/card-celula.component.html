@@ -1,0 +1,23 @@
+<div class="celula-card">
+
+  <img
+    *ngIf="celula.imagem"
+    [src]="celula.imagem"
+    [alt]="celula.nome"
+    loading="lazy"
+  />
+
+  <h3>{{ celula.nome }}</h3>
+
+  <p><strong>Líder:</strong> {{ celula.lider }}</p>
+  <p><strong>Quando:</strong> {{ celula.diaHora }}</p>
+  <p><strong>Onde:</strong> {{ celula.local }}</p>
+
+  <div
+    *ngIf="celula.telefone"
+    class="btn-whats"
+    (click)="abrirWhats()">
+    Entrar em contato
+  </div>
+
+</div>

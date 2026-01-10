@@ -1,0 +1,68 @@
+.foto{
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+.img h1 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%); //controla a altura
+  color: white;
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.celula-foto{
+    margin: 20px;
+    border-radius: 15px;
+}
+.sobre{
+     background: linear-gradient(to right,
+            /* Direção: da esquerda para a direita */
+            #330000 0%,
+            /* 1. Início (Esquerda): Quase Preto/Tijolo Escuro */
+            #8B0000 35%,
+            /* 2. Transição: Vermelho Escuro */
+            #8B0000 50%,
+            /* 3. Centro: Laranja/Vermelho Vivo (O ponto mais claro) */
+            #8B0000 65%,
+            /* 4. Transição: Voltando para Vermelho Escuro */
+            #330000 100%
+            /* 5. Fim (Direita): Quase Preto/Tijolo Escuro */
+        );    
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; 
+        padding: 20px; 
+}
+
+.text {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 0px; 
+    flex-direction: column;
+    
+}
+
+.text h1 {
+    margin: 10px;
+    color: white; 
+    font-size: 40px;
+    text-align: center;
+}
+.text span{
+    color: white;
+    font-size: 20px;
+    max-width: 900px;
+}
+.celulas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px 40px;
+}
