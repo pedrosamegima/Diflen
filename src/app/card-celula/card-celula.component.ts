@@ -11,13 +11,12 @@ import { Celula } from '../celulas/celulas.component';
 export class CardCelulaComponent {
   @Input() celula!: Celula;
 
-  abreWhats(){
-    if(!this.celula.telefone) return;
+  abreWhats() {
+    if (!this.celula.telefone) return;
 
-    const mensagem = `Oii, me identifiquei com ${this.celula.nome}`;
-
+    const msg = `Olá! Quero participar da ${this.celula.nome}`;
     window.open(
-      `https://wa.me/${this.celula.telefone}?text=${encodeURIComponent(mensagem)}`,
+      `https://wa.me/${this.celula.telefone}?text=${encodeURIComponent(msg)}`,
       '_blank'
     );
   }

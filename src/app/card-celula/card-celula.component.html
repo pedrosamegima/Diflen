@@ -1,23 +1,42 @@
-<div class="celula-card">
+<div class="card mb-3">
+  <div class="row g-0">
 
-  <img
-    *ngIf="celula.imagem"
-    [src]="celula.imagem"
-    [alt]="celula.nome"
-    loading="lazy"
-  />
+    <div class="col-md-4">
+      <img
+        [src]="celula.imagem"
+        class="img-fluid rounded-start"
+        [alt]="celula.nome">
+    </div>
 
-  <h3>{{ celula.nome }}</h3>
+    <div class="col-md-8">
+      <div class="card-body">
 
-  <p><strong>Líder:</strong> {{ celula.lider }}</p>
-  <p><strong>Quando:</strong> {{ celula.diaHora }}</p>
-  <p><strong>Onde:</strong> {{ celula.local }}</p>
+        <!-- Nome da célula -->
+        <h5 class="card-title">{{ celula.nome }}</h5>
 
-  <div
-    *ngIf="celula.telefone"
-    class="btn-whats"
-    (click)="abrirWhats()">
-    Entrar em contato
+        <!-- Líderes -->
+        <span class="card-lideres">
+          {{ celula.lideres }}
+        </span>
+
+         <!-- Descrição -->
+        <p class="card-text">
+          {{ celula.descricao }}
+        </p>
+
+        <!-- Descrição -->
+        <p class="card-text">
+          {{ celula.diaHora }}
+        </p>
+
+        <div class="btn">
+          <a (click)="abreWhats()" style="cursor:pointer">
+            Quero participar
+          </a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
-
 </div>

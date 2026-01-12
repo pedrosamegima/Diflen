@@ -2,7 +2,7 @@
 <main class="principal">
     <div class="img">
         <img src="/foto10.png" alt="" class="foto">
-        <div class="text">
+        <div class="text-img">
             <h1>Células DIFLEN</h1>
         </div>
     </div>
@@ -23,9 +23,18 @@
             </span>
         </div>
     </div>
-    <section class="celulas-grid">
-        <app-card-celula *ngFor="let c of celulas" [celula]="c">
-        </app-card-celula>
-    </section>
+    <div class="celula">
+
+    </div>
+<section class="lista-celulas">
+  <app-card-celula
+    *ngFor="let c of celulas"
+    [celula]="c"
+    >
+  </app-card-celula>
 </section>
+</section>
+<a href="#" class="whats" target="_blank" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+</a>
 <app-footer></app-footer>

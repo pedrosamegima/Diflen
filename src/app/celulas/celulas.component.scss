@@ -1,6 +1,6 @@
 .foto{
     width: 100%;
-    max-height: 600px;
+    max-height: 500px;
     object-fit: cover;
 }
 .img h1 {
@@ -14,10 +14,17 @@
   text-align: center;
   white-space: nowrap;
 }
+.text-img{
+    font-size: 80px;
+}
 
 .celula-foto{
     margin: 20px;
     border-radius: 15px;
+    transition: transform 0.6s ease-in-out;
+}
+.celula-foto:hover{
+      transform: scale(1.02);
 }
 .sobre{
      background: linear-gradient(to right,
@@ -58,11 +65,40 @@
 .text span{
     color: white;
     font-size: 20px;
-    max-width: 900px;
+    max-width: 900px;   
 }
-.celulas-grid {
+.lista-celulas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  padding: 20px 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 40px 30px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .lista-celulas {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+.whats{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+   transition: transform 0.5s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.whats i{
+     font-size: 28px;
+     color: white;
+}
+.whats:hover{
+    transform: scale(1.1) rotate(10deg);
 }
