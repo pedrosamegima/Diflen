@@ -17,6 +17,7 @@
     position: relative;
     overflow: visible; 
   }
+  
 
   .img {
     margin-bottom: -60px; 
@@ -54,3 +55,34 @@
     font-size: 24px;
     margin: 0;
   }
+  .footer.tablet .logo {
+  width: 200px; 
+}
+.footer.tablet .texto {
+  right: 20px; 
+  top: 80px;
+}
+.footer.mobile {
+  align-items: center; 
+  padding-bottom: 30px;
+}
+
+.footer.mobile .img {
+  margin-bottom: 0; 
+}
+
+.footer.mobile .icons {
+  margin-left: 0; 
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.footer.mobile .texto {
+  position: static; 
+  text-align: center;
+  padding: 0 20px;
+}
+
+.footer.mobile .texto h2 {
+  font-size: 20px;
+}

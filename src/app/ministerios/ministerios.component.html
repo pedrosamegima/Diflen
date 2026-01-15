@@ -9,7 +9,8 @@
         </div>
     </div>
     <section>
-        <div class="card-louvor">
+        <div [class.card-louvor]="isDeskTop$ | async" 
+             [class.card-louvor-mobile]="((isMobile$ | async) || (isTablet$ | async))">
             <img class="louvor-foto" src="/louvor2.jpeg" alt="">
             <div class="texto">
                 <span>
@@ -42,89 +43,30 @@
         </div>
         <!--Aqui começa os cards dos ministerios-->
         
-        <div class="ministerios">
-            <!--CARD 1-->
-            <div class="card mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="/min-atmosfera.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Atmosfera</h5>
-                            <p class="card-text">O Ministério da Atmosfera é quem faz todo mundo se sentir em casa. Com alegria, cuidado e um sorriso no rosto, preparamos o ambiente para que cada pessoa viva algo especial com Deus desde o primeiro passo na igreja.</p>
-                            <div class="btn">
-                                <a (click)="abreWhats('Atmosfera')" style="cursor: pointer;">Quero ser voluntário</a>
-                            </div>
-                              
-                        </div>
-                    </div>
-                </div>
+       <div class="ministerios-grid" 
+     [style.grid-template-columns]="(isMobile$ | async) ? '1fr' : 'repeat(2, 1fr)'">
+      
+      <div class="card mb-3 shadow-sm" *ngFor="let min of listaMinisterios">
+        <div class="row g-0 align-items-center">
+          <div [class.col-md-4]="!(isMobile$ | async)" [class.col-12]="isMobile$ | async">
+            <img [src]="min.img" class="img-fluid rounded-start card-img-fit" [alt]="min.nome">
+          </div>
+          <div [class.col-md-8]="!(isMobile$ | async)" [class.col-12]="isMobile$ | async">
+            <div class="card-body">
+              <h5 class="card-title">{{ min.nome }}</h5>
+              <p class="card-text">{{ min.texto }}</p>
+              <div class="btn-container">
+                <button (click)="abreWhats(min.nome)" class="btn-voluntario">
+                  Quero ser voluntário
+                </button>
+              </div>
             </div>
-        
-        <!--CARD 2-->
-        <div class="card mb-3" >
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="/midia.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Midia</h5>
-                        <p class="card-text">Seja na luz, na live, nos telões, nos stories ou nas fotos, o ministério de mídia é pra quem quer usar a criatividade pra servir a Deus. Aqui, cada detalhe comunica algo maior: o amor de Jesus, alcançando pessoas dentro e fora do culto.</p>
-                        <div class="btn">
-                             <a (click)="abreWhats('Midia')" style="cursor: pointer;">Quero ser voluntário</a>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <!--CARD 3-->
-        <div class="card mb-3" >
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="/min-kids.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Kids</h5>
-                        <p class="card-text">Com muita criatividade, alegria e amor, levamos a Palavra de Deus de um jeito leve e divertido, ajudando cada criança a crescer com valores firmados em Jesus.</p>
-                        <div class="btn">
-                            <a (click)="abreWhats('Kids')" style="cursor: pointer;">Quero ser voluntário</a>
-                        </div>
-                         
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--CARD 4-->
-        <div class="card mb-3" >
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="min-louvor.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Louvor</h5>
-                        <p class="card-text">O Ministério de Louvor existe para levar pessoas à presença de Deus através da música. Com vozes, instrumentos e corações entregues, adoramos a Deus e criamos um ambiente onde vidas são tocadas e Jesus é exaltado.</p>
-                        <div class="btn">
-                             <a (click)="abreWhats('Louvor')" style="cursor: pointer;">Quero ser voluntário</a>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
-
-
-
-
-
-    </section>
+      </div>
+    </div>
+  </section>
 </main>
-
 <a href="#" class="whats" target="_blank" aria-label="WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>

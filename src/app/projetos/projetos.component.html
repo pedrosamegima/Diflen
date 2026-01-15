@@ -3,7 +3,7 @@
     <i class="bi bi-whatsapp"></i>
 </a>
 <main class="principal">
-    <div class="img">
+    <div class="img" [class.modo-celular]="isMobile$ | async">
         <img src="/foto22.png" alt="" class="foto">
         <div class="text-img">
             <h1>Eventos do DIFLEN</h1>

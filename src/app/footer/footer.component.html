@@ -1,4 +1,9 @@
-<div class="footer">
+<div class="footer"
+    [class.mobile] = "isMobile$ | async"
+    [class.tablet] = " isTablet$ | async"
+    [class.desktop] = "isDeskTop$ | async">
+    <div class="footer-container">
+    <div class="brand-section">
     <div class="img">
         <img class="logo" src="/logo.png" alt="" srcset="">
     </div>
@@ -17,10 +22,12 @@
             <i class="bi bi-spotify"></i>
          </a>
     </div>
+    </div>
     <div class="texto">
         <h2>DIFLEN ITAPETININGA</h2>
         <span>Discipulando e Formando Líderes Em Nações.</span>
         <h3>Venha nos conhecer e adorar a Jesus juntos!!</h3>
+    </div>
     </div>  
     <footer class="d-flex justify-content-center m-2 align-items-center py-3 my-4">
     <p class="mb-0 text-white text-nowrap">&copy; 2026 DIFLEN ITAPETININGA</p>

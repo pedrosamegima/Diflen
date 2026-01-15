@@ -1,44 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
-.foto{
-    width: 100%;
-   
-}
+
 .img {
   position: relative;
-}
-
-.img h1 {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%); //controla a altura
-  color: white;
-  font-size: 90px;
-  font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
-    
-}
-.title{
-    padding: 15px;
-}
-.text{
-    display: flex;
+  
+  .foto {
     width: 100%;
+    display: block;
+  }
+
+  h1 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+    font-size: clamp(2rem, 8vw, 90px);  //Ele não deixa quebrar o texto dependendo da tela
+    white-space: normal; 
+  }
+
+  h2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    width: 85%;
+    font-size: clamp(1rem, 4vw, 40px);
+  }
 }
-.img h2 {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, 70%); //controla a altura
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
+.card-louvor {
+  background: linear-gradient(to right, #330000 0%, #8B0000 35%, #8B0000 50%, #8B0000 65%, #330000 100%);
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+
+  .louvor-foto {
+    height: 600px;
+    width: 600px;
+    margin: 10px;
+    border-radius: 25px;
+    object-fit: cover;
+      transition: transform 0.6s ease-in-out;
+  }
+  .louvor-foto:hover{
+    transform: scale(1.02);
+}
+}
+
+.card-louvor-mobile {
+  background: linear-gradient(to bottom, #330000, #8B0000, #330000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
   text-align: center;
-  padding: 5px;
+
+  .louvor-foto {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+  }
+}
+
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  
+  span {
+    color: white;
+    text-align: center;
+    font-family: "Inria Serif", serif;
+    font-size: 20px;
+  }
+
+  p {
+    color: white;
+    text-align: center;
+    font-family: "Inria Serif", serif;
+    font-size: 15px;
+  }
+}
+
+.line {
+  width: 97%;
+  height: 2px;
+  background-color: white;
+  margin: 20px auto;
+}
+
+
+.ministerios-grid {
+  display: grid;
+  gap: 25px;
+  justify-content: center;
+  margin: 40px 15px;
+}
+
+.card {
+  border: none;
+  overflow: hidden; 
+  border-radius: 12px;
+  
+  .row {
+    margin: 0; 
+    height: 100%;
+  }
+
+  .col-md-4, .col-12 {
+    padding: 0; 
+  }
+
+  .card-img-fit {
+    width: 100%;
+    height: 100%;
+    min-height: 220px; 
+    object-fit: cover; 
+    display: block;
+    border-radius: 12px 0 0 12px;
+  } 
+}
+
+.btn-voluntario {
+  background: linear-gradient(to bottom, #000000 0%, #333333 100%);
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s;
 
 }
+ .btn-voluntario:hover {
+    transform: translateY(-2px);
+    color: white;
+  }
 .whats{
     position: fixed;
     bottom: 20px;
@@ -61,91 +172,19 @@
     transform: scale(1.1) rotate(10deg);
 }
 
-.louvor-foto{
-    height: 600px;
-    width: 600px;
-    margin: 10px;
-    border-radius: 25px;
-    transition: transform 0.6s ease-in-out;
-}
-.louvor-foto:hover{
-    transform: scale(1.02);
-}
+//Celular
+@media (max-width: 768px) {
+  .card .card-img-fit {
+    height: 200px;
+    border-radius: 12px 12px 0 0; 
+  }
+  
+  .card-body {
+    text-align: center;
+  }
 
-.card-louvor{
-    background: linear-gradient(to right,
-            /* Direção: da esquerda para a direita */
-            #330000 0%,
-            /* 1. Início (Esquerda): Quase Preto/Tijolo Escuro */
-            #8B0000 35%,
-            /* 2. Transição: Vermelho Escuro */
-            #8B0000 50%,
-            /* 3. Centro: Laranja/Vermelho Vivo (O ponto mais claro) */
-            #8B0000 65%,
-            /* 4. Transição: Voltando para Vermelho Escuro */
-            #330000 100%
-            /* 5. Fim (Direita): Quase Preto/Tijolo Escuro */
-        );
-        flex-direction: row;
-        display: flex;
-         align-items: center;
-         gap: 20px;
-}
-.line {
-  width: 97%;
-  height: 2px;
-  background-color: white;
-  margin: 20px 0;
-}
-.texto {
-  display: flex;
-  flex-direction: column;
-}
-.texto span{
-   color: white;
-   text-align: center;
-   font-family: "Inria Serif", serif;
-   font-size: 20px;
-   
-}
-.texto p{
-   color: white;
-   text-align: center;
-   font-family: "Inria Serif", serif;
-   font-size: 15px;
-}
-.ministerios {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); //2 colunas
-    gap: 20px;
-    justify-content: center;
-    margin: 40px 10px 10px 10px;
-}
-@media (max-width: 576px){ //Card responsivo pro celular
-    .ministerios{
-        grid-template-columns: repeat(1fr);
-    }
-}
-a{
+  .btn-container {
     display: flex;
     justify-content: center;
-    text-align: center;
-}
-.card img {
-  width: 100%;
-  height: 100%;
-  max-height: 220px; /* ajuste conforme seu card */
-  object-fit: cover; /* corta sem distorcer */
-  border-radius: 10px;
-}
-.btn{
-   background: linear-gradient(to bottom, #000000 0%, #333333 100%);
-   border-radius: 20px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 190px;
-}
-.btn a{
-    color: white;
+  }
 }

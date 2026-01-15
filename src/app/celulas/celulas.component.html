@@ -1,6 +1,8 @@
 <app-nav-bar></app-nav-bar>
 <main class="principal">
-    <div class="img">
+    <div class="img" 
+    [class.modo-celular]="isMobile$ | async"
+         [class.modo-tablet]="isTablet$ | async">
         <img src="/foto10.png" alt="" class="foto">
         <div class="text-img">
             <h1>Células DIFLEN</h1>
@@ -8,7 +10,8 @@
     </div>
 </main>
 <section>
-    <div class="sobre">
+    <div class="sobre" [class.modo-celular]="isMobile$ | async"
+    [class.modo-tablet]="isTablet$ | async">
         <img src="/foto8.png" alt="" class="celula-foto">
 
         <div class="text">

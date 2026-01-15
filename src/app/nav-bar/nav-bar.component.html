@@ -1,4 +1,6 @@
-<nav class="menu">
+<nav class="menu" 
+[class.modo-celular]="isMobile$ | async" 
+     [class.modo-tablet]="isTablet$ | async">
     <img class="logo" src="/logo.png" alt="logo">
 
     <div class="menu-links">

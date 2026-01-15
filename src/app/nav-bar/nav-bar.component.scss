@@ -28,12 +28,12 @@
 
 ul {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row; /* Força horizontal */
+    flex-wrap: nowrap;   /* PROÍBE quebrar linha */
     list-style: none;
-    text-align: center;
     align-items: center;
+    width: auto;
 }
-
 li {
     list-style: none;
     font-family: "BBH Bogle", sans-serif;
@@ -53,8 +53,9 @@ li {
     flex: 1;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    overflow: hidden; /* Garante que nada saia da linha */
 }
-
 .menu a {
     text-decoration: none;
     color: white;
@@ -81,4 +82,38 @@ li {
     width: 100%;
 
 }
+/* Quando for TABLET */
+.menu.modo-tablet .logo {
+    width: 110px; /* Diminui a logo para sobrar espaço lateral */
+    height: auto;
+}
 
+.menu.modo-tablet ul {
+    gap: 8px; /* Diminui o espaço entre os links */
+}
+
+.menu.modo-tablet a {
+    font-size: 16px;
+    padding: 10px 5px;
+}
+
+/* Quando for CELULAR */
+.menu.modo-celular .logo {
+    width: 80px; /* Logo bem menor para os links caberem ao lado */
+    height: auto;
+}
+
+.menu.modo-celular .menu-links {
+    justify-content: center; /* Centraliza o bloco de links no espaço que sobrou */
+}
+
+.menu.modo-celular ul {
+    gap: 2px; /* Espaço mínimo entre links */
+}
+
+.menu.modo-celular a {
+    font-size: 9px; /* Fonte reduzida para caber os 6 links na horizontal */
+    padding: 5px 3px;
+    white-space: nowrap; /* Impede que palavras como ACAMPAMENTO quebrem */
+    letter-spacing: -0.5px; /* Aperta as letras para ganhar espaço */
+}
