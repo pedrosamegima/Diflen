@@ -34,6 +34,8 @@
     color: white;
     text-align: center;
     transform: translateY(-15%); //move o texto todo pra cima
+    padding: 0 20px;
+    
 }
 
 .hero-text h1 {
@@ -113,24 +115,24 @@
 
 
 .info {
-  background: linear-gradient(to bottom, #000000 0%, #333333 100%);
-    width: fit-content;        
-    min-width: 110px;          
+    background: linear-gradient(to bottom, #000000 0%, #333333 100%);
+    width: fit-content;
+    min-width: 110px;
     border-radius: 20px;
-    margin: 15px auto;         
-    padding: 0 15px;           
-    display: block; 
-    margin: auto auto 15px auto;           
+    margin: 15px auto;
+    padding: 0 15px;
+    display: block;
+    margin: auto auto 15px auto;
 }
+
 .card-body {
     display: flex;
-    flex-direction: column; 
-    height: 100%;           
-    padding: 10px;    
-  border: 1px solid #eeeeee;
-   box-shadow: 0 10px 30px rgba(0,0,0, 0.1); //profundidade
-
-   color: #444;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); //profundidade
+    color: #444;
 }
 
 
@@ -138,13 +140,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;               
+    gap: 10px;
     color: #ffffff;
     text-decoration: none;
-    height: 40px;            
+    height: 40px;
     font-weight: 500;
 }
-.whats{
+
+.whats {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -154,14 +157,55 @@
     border-radius: 50%;
     display: flex;
     justify-content: center;
-   transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
     z-index: 9999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-.whats i{
-     font-size: 28px;
-     color: white;
+
+.whats i {
+    font-size: 28px;
+    color: white;
 }
-.whats:hover{
+
+.whats:hover {
     transform: scale(1.1) rotate(10deg);
+}
+@media (max-width: 768px) {
+    
+    .video-wrapper {
+        height: 380px !important; 
+    }
+
+    
+    .hero-text {
+        transform: translateY(-15%) !important; 
+        padding: 0 10px;
+
+        h1 {
+            font-size: 28px !important; 
+            margin-bottom: 5px;
+        }
+
+        span {
+            font-size: 14px !important;
+            line-height: 1.2;
+        }
+    }
+
+    
+    .hero {
+        margin-top: 0;
+        padding: 30px 15px !important;
+        height: auto !important; 
+        
+        .text-principal {
+            font-size: 20px !important; 
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .text-passagem {
+            font-size: 14px !important;
+        }
+    }
 }
