@@ -209,3 +209,12 @@
         }
     }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .video-wrapper {
+        height: 400px !important; 
+    }
+
+    .hero-text {
+        transform: translateY(-20%) !important; // Sobe o texto no table
+    }
+}
