@@ -175,10 +175,17 @@
 //Celular
 @media (max-width: 768px) {
   .card .card-img-fit {
-    height: 200px;
+    height: 290px;
     border-radius: 12px 12px 0 0; 
+    object-position: center;
+    width: 100%;
+    object-fit: cover;
+    display: block;
   }
-  
+  .card{
+    display: flex;
+    flex-direction: column;
+  }
   .card-body {
     text-align: center;
   }
