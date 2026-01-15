@@ -1,5 +1,4 @@
-
-import { Component, HostListener} from '@angular/core';
+import { AfterViewInit, Component, HostListener, ViewChild, ElementRef} from '@angular/core';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { MapaComponent } from '../mapa/mapa.component';
@@ -17,7 +16,16 @@ import { RouterModule } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+  @ViewChild('meuVideo') videoRef!: ElementRef<HTMLVideoElement>;
+  //Força o autoplay e deixa ele mudo
+  ngAfterViewInit(): void {
+    const video = this.videoRef.nativeElement;
+    video.muted = true;
+    video.play().catch(error =>{
+      console.log("Navegador bloqueou o autoplay", error);
+    });
+  }
     isMobile$: Observable<boolean>;
           isTablet$: Observable<boolean>;
           isDeskTop$: Observable<boolean>;
