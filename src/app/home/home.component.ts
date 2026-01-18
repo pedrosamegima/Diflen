@@ -21,7 +21,7 @@ export class HomeComponent implements AfterViewInit {
   //Força o autoplay e deixa ele mudo
   ngAfterViewInit(): void {
     const video = this.videoRef.nativeElement;
-    video.muted = true;
+   // video.muted = true;
     video.play().catch(error =>{
       console.log("Navegador bloqueou o autoplay", error);
     });

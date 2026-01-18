@@ -28,37 +28,38 @@ export class CelulasComponent {
       nome: 'LIFE DIFLEN - Athenas do Sul',
       lideres: 'Amanda e Gabriel',
       diaHora: 'Sexta-Feira ás 20hrs',
-      imagem: '/celula3.jpeg',
+      imagem: '/celula-atenas.jpeg',
       telefone: '5515991234567'
     },
     {
       nome: 'LIFE DIFLEN - LAGO DOS IPÉS',
       lideres: 'Maju e Octavio',
       diaHora: 'Quarta-Feira ás 20hrs',
-      imagem: '/assets/celula-familia.jpg',
+      imagem: '/celula-lago.jpeg',
       telefone: '5515987654321'
     },
     {
       nome: 'DIFLEN+ - Jardim Fogaça',
       lideres: 'Geh e Caf',
       diaHora: 'Quinta-Feira ás 20hrs',
-      imagem: '/assets/celula-kids.jpg',
+      imagem: '/celula-caf.jpeg',
+      telefone: '5515977777777'
+    },
+     {
+      nome: 'LIFE DIFLEN - Jardim Shangrilla',
+      lideres: 'João e Natália',
+      diaHora: 'Sexta-Feira ás 20hrs',
+      imagem: '/celula-joao.jpeg',
       telefone: '5515977777777'
     },
      {
       nome: 'LIFE DIFLEN - Jardim Italia',
-      lideres: 'Geh e Caf',
+      lideres: '',
       diaHora: 'Quinta-Feira ás 20hrs',
       imagem: '/assets/celula-kids.jpg',
       telefone: '5515977777777'
     },
-    {
-      nome: 'LIFE DIFLEN - Jardim Shangrilla',
-      lideres: 'João e Natália',
-      diaHora: 'Sexta-Feira ás 20hrs',
-      imagem: '/assets/celula-kids.jpg',
-      telefone: '5515977777777'
-    },
+   
     {
       nome: 'LIFE DIFLEN - Paineiras',
       lideres: 'Tarik e Queren',

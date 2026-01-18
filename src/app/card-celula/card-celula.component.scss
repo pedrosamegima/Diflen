@@ -42,8 +42,9 @@
   margin-bottom: 5px;
 }
 .card .row{
-  height: 180px;
- 
+  height: auto;
+  margin: 0;
+
 }
 .celulas-grid {
   display: grid;
@@ -52,16 +53,23 @@
 }
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
 .card-body {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding: 12px;
+  height: auto;
+  padding: 16px;
 }
 .card-body .btn {
   margin-top: auto;
+}
+.card {
+  overflow: hidden;
+  height: auto; /* Garante que o card cresça com o conteúdo */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
